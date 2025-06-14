@@ -7,6 +7,7 @@ class PersonaModel {
         2 => ['id' => 2, 'nombre' => 'Ana', 'email' => 'ana@mail.com']
     ];
 
+
     public function obtenerTodos() {
         return self::$personas;
     }
