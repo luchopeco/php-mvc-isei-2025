@@ -6,8 +6,6 @@ spl_autoload_register(function ($class) {
     require_once __DIR__ . '/../app/' . $class . '.php';
 });
 
-use App\Controllers\PersonaController;
-
 $uri = $_SERVER['REQUEST_URI'];
 $scriptName = dirname($_SERVER['SCRIPT_NAME']);
 $basePath = str_replace('\\', '/', $scriptName);
@@ -15,7 +13,7 @@ $uri = str_replace($basePath, '', $uri);
 $uri = strtok($uri, '?');
 $uriParts = explode('/', trim($uri, '/'));
 
-$controller = $uriParts[0] ?? 'persona';
+$controller = $uriParts[0] ?? '';
 $method = $uriParts[1] ?? 'index';
 $params = array_slice($uriParts, 2);
 
