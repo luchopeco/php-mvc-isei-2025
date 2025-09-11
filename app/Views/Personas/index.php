@@ -3,9 +3,9 @@
 <ul>
 <?php foreach ($personas as $p): ?>
     <li>
-        <?= $p['nombre'] ?> (<?= $p['email'] ?>) - 
-        <a href="<?= BASE_URL ?>/personas/editar/<?= $p['id'] ?>">Editar</a> | 
-        <a href="<?= BASE_URL ?>/personas/eliminar/<?= $p['id'] ?>">Eliminar</a>
+        <?= $p->Nombre ?> (<?= $p->Email ?>) - 
+        <a href="<?= BASE_URL ?>/personas/editar/<?= $p->Id ?>">Editar</a> | 
+        <a href="<?= BASE_URL ?>/personas/eliminar/<?= $p->Id ?>">Eliminar</a>
     </li>
 <?php endforeach; ?>
 </ul>
